@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    :root {
+      --yellow: #FFA900;
+      --black: #3A3A3A;
+    }
+
+    .top {
+      display: grid;
+      grid-template-areas: 
+        "hero hero cta-primary"
+        "hero hero cta-secondary"
+    }
+
+    .hero {
+      display: flex;
+      grid-area: hero;
+      min-height: 200px;
+      padding: 32px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      background-color: rgba(0, 0, 0, .2);
+    }
+
+    .hero > * {
+      margin: 0 0 8px 0;
+      padding: 2px 4px;
+      background-color: var(--yellow)
+    }
+
+    .cta--primary {
+      grid-area: cta-primary;
+    }
+    
+    .cta--secondary {
+      grid-area: cta-secondary;
+    }
+
+    .nav {
+      display: grid;
+      grid-gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .nav > * {
+      padding: 8px;
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: var(--yellow);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top">
+      <header class="hero">
+        <h2>Terry Taco Joint</h2>
+        <p>Pretty Good Tacos!!</p>
+      </header>
+
+      <div class="cta cta--primary">
+
+      </div>
+      
+      <div class="cta cta--secondary">
+
+      </div> 
+    </div>
+
+    <nav class="nav">
+      <a href="">Tacos</a>
+      <a href="">Beers</a>
+      <a href="">Wines</a>
+      <a href="">Desserts</a>
+    </nav>
+
+    <section class="feature">
+      
+    </section>
+  </div>
+</body>
+</html>
